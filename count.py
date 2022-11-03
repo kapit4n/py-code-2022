@@ -16,6 +16,7 @@ def countLines(path):
     fReadme.write("S(" + str(count) + ")\n")
     return count
 
+next_goal = 200
 
 total = 0
 fReadme.write("## Categories")
@@ -25,7 +26,18 @@ for f in os.listdir('./src-ig'):
     if (os.path.isdir(pathFull)):
         total = total + countLines(pathFull)
 
-print(total)
+for f in os.listdir('./src'):
+    pathFull = "./src/" + f
+    fReadme.write("\n## " + str(f).upper() + "\n")
+    if (os.path.isdir(pathFull)):
+        total = total + countLines(pathFull)
+
+if (total >= next_goal):
+    print(total, "GOAL REACHED")
+else:
+    print(total, (next_goal - total), "FOR THE GOAL")
+
+
 
 
 fReadme.write("\n# Total \n" + str(total))
