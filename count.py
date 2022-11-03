@@ -3,6 +3,7 @@ import pathlib
 
 fReadme = open("./Readme.md", "w")
 
+## Linear count
 def countLines(path):
     count = 0
     for f in os.listdir(path):
