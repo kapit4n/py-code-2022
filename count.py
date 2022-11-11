@@ -16,7 +16,7 @@ def countLines(path):
     fReadme.write("S(" + str(count) + ")\n")
     return count
 
-next_goal = 200
+next_goal = 500
 
 total = 0
 fReadme.write("## Categories")
